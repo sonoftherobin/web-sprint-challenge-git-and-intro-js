@@ -247,13 +247,13 @@ Use copy to do the following:
 
 function listOfNames(array) {
   const copy =[...array];
-  for(let i=0; i<copy.length; i++){
-  const names=copy[i].name.slice();
-  console.log(names);
-  //return names
+  const names = []
+  for(let i=0; i<array.length; i++){
+   names.push(copy[i].name.slice())
+  }
+  return names
 }
-}
-listOfNames(artists);
+
 
 
 
@@ -289,9 +289,20 @@ Use addArtist to do the following:
 4. Return the array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist() {
-
+function addArtist(array,name,years,genre,nationality,bio) {
+  const newObj = Object.create(artists);
+  newObj.name=name;
+  newObj.years=years
+  newObj.genre=genre
+  newObj.nationality=nationality
+  newObj.bio=bio
+  //console.log(array.push(newObj));
+  const addOne=array.push(newObj)
+  console.log(array);
+return array
 }
+//addArtist(artists,'Aaron','1980-2022','Web Design','American','I love BTC and Star Trek');
+
 
 
 
@@ -303,8 +314,10 @@ Use lotsOfArt to do the following:
 🌟 EXAMPLE: lotsOfArt(artists) will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]
 */
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  if(array.paintings>100){
+    
+  }
 }
 
 
