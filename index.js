@@ -336,16 +336,13 @@ Use artistInfo to do the following:
 
 function artistInfo(array,artistName){
   for(let i=0;  i<array.length; i++){
-    
-  if(array[i].name=artistName){
-    const x=(array[i].bio.slice([i]));
-    console.log (x);
+    if(array[i].name===artistName){
+    return array[i].bio
+    //return xy
      }
-  
-  
-    }
+  }
 }
-artistInfo(artists,'Diego Rivera');
+//artistInfo(artists,'Diego Rivera');
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 9: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
